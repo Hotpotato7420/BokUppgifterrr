@@ -10,7 +10,7 @@ public class Uppgift11_1 {
 
         System.out.println("Enter your numbers: 0 to exit.");
         int num;
-        while (true) { // Dynamic array that grows as long as you dont exit it
+        while (true) { // Dynamic array that grows as long as you don't exit it
             num = in.nextInt();
             if (num == 0) // Exit if you enter a 0
                 break;

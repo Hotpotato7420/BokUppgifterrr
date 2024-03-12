@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="953d86cf-742e-4045-8ae3-873b456fba17" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BokUppgifterrr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel11/Uppgift11_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel11/Uppgift11_1Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel11/tst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Uppgift8_9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_3Spinoff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Kapitel9/Uppgift9_9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kapitel11/Uppgift11_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kapitel11/Uppgift11_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +49,14 @@
       <option name="presentableId" value="Default" />
       <updated>1710231915595</updated>
     </task>
+    <task id="LOCAL−00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1710232193310</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1710232193310</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
