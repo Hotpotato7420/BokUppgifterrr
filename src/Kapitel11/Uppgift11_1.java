@@ -10,9 +10,9 @@ public class Uppgift11_1 {
 
         System.out.println("Enter your numbers: 0 to exit.");
         int num;
-        while (true) { // Dynamic array that grows as long as you don't exit it
+        while (true) { // ArrayList that goes on as long as its not canceled or over 1000 numbers
             num = in.nextInt();
-            if (num == 0) // Exit if you enter a 0
+            if (num == 0 || talList.size() >= 1000) // Exit if you enter a 0 or the arraylist is over 1000 numbers
                 break;
             talList.add(num); // Add the number to the list
         }
@@ -31,7 +31,7 @@ public class Uppgift11_1 {
                         isDuplicate[b] = true; // Puts isDuplicate = true to duplicates
                     }
                 }
-                System.out.println(tal[i]); // Prints non dupes
+                System.out.print("Numbers after removing duplicates: " + tal[i] + ", "); // Prints non dupes
             }
         }
     }
