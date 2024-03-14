@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Uppgift11_4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        double[] myList = new double [10]; // Initialize an array with 5 numbers
+        double[] myList = new double [10]; // Initialize an array with 10 numbers
         double[] copyList = new double[myList.length];
 
         System.out.println("Input your numbers: ");
