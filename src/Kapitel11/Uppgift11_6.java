@@ -26,4 +26,7 @@ public class Uppgift11_6 {
         }
         return sum;
     }
+    public static double kvadSum(double[] array){
+    return 1;
+    }
 }
