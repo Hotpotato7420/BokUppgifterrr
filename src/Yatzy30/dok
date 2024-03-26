@@ -1,0 +1,8 @@
+Tisdag 26 Mars:
+1. Skapat en tärningsfunktion
+2. Skapat antal spelare och spelarens namn som tar user input
+3. Har skapat en array som har spelarnas poäng, börjar med 30 poäng.
+
+Som ska göras:
+1. Börja med spel metoden
+2. Kolla i pseudo koden.

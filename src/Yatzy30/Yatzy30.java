@@ -1,4 +1,8 @@
+package Yatzy30;
+
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Yatzy30 {
@@ -6,27 +10,61 @@ public class Yatzy30 {
 
     public static void main(String[] args) {
 
+        // Create a scanner that takes in input
         Scanner in = new Scanner(System.in);
 
+        // Ask user for number of players
         System.out.println("Hur många spelare är det?");
-        int players = in.nextInt();
+        int playerAmount = in.nextInt();
 
-        
-        for (int i = 1; i <= players; i++){
-            System.out.println("Vad heter spelare " + i + "?");
 
+        // Ask user for player names and put them into an ArrayList
+        ArrayList<String> playerList = new ArrayList<>();
+        int i = 0;
+        String playerName;
+
+        while (playerList.size() <= playerAmount) {
+            playerName = in.nextLine();
+
+            if (i > 0){ // Make the first character of their names uppercase
+                playerName = playerName.substring(0, 1).toUpperCase() + playerName.substring(1);
+            }
+
+            playerList.add(playerName); // Add the playerName to the ArrayList
+
+            if(i < playerAmount){ // The printout to ask for the names,
+                System.out.println("Vad heter spelare " + (i + 1) + "?");
+            }
+            i++;
         }
-        //String[] playerList
+        playerList.remove(0);
+
+        System.out.println(playerList);
+
+        int[] playerPoints = new int[playerAmount]; // Array for storing points
+            for (i = 0; i < playerAmount; i++) {
+                playerPoints[i] = 30;
+            }
+        for (i = 0; i < playerAmount; i++) {
+            System.out.println("Spelare " + playerList.get(i) + " har "  + playerPoints[i] + " poäng.");
+            }
+
+        System.out.println(Arrays.toString(playerPoints));
+
+
+
+
 
         diceRoll();
         System.out.println("You rolled a " + diceRoll());
     }
 
-
+    // Method for dice rolls, call when rolling a die
     public static int diceRoll(){
 
     int dice;
-    int randomNum = (int)(Math.random() * 6);
+    int randomNum = (int)(Math.random() * 6); // Make a random-number that goes from 1-6
+    // Below is the thing for calculating the die
     if (randomNum <= 1){
         dice = 1;
     }
@@ -45,8 +83,6 @@ public class Yatzy30 {
     else {
         dice = 6;
     }
-
-
         return dice;
     }
 
