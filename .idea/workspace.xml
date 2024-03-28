@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953d86cf-742e-4045-8ae3-873b456fba17" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/Yatzy30/dok" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kapitel11/tst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kapitel11/tst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Yatzy30.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Yatzy30/Yatzy30.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Yatzy30/Yatzy30.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Yatzy30/Yatzy30.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/axel.jakobsson/Documents/Bokuppgifter/BokUppgifterrr/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/axel.jakobsson/Documents/Bokuppgifter/BokUppgifterrr/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\axel.jakobsson\Documents\Bokuppgifter\BokUppgifterrr\src" />
@@ -149,7 +148,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1711368553415</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="commit">
+      <option name="closed" value="true" />
+      <created>1711442483192</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1711442483192</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
