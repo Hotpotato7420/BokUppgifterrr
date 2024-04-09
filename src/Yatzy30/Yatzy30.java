@@ -25,30 +25,78 @@ public class Yatzy30 {
         int[] playerPoints = startingPlayerPoints(playerAmount, playerList);
 
 
+        boolean ask = false;
+        while (ask == false){
+            System.out.println("Vill du spela? Y/N");
+            if ((in.next().equals("y")) || (in.next().equals("Y"))){
+                break;
+            }
+        }
         mainGame();
     }
 
     public static void mainGame() {
         int diceRolls = 6; // Number of dices left
-        int[] roll = new int[diceRolls];
+        ArrayList<Integer> roll;
+        roll = new ArrayList<>();
+        boolean tst = false; // Only sends a message once per roll.
+        boolean saving = false;
 
-        ArrayList<Integer> numbers = null;
+        ArrayList<Integer> numbers = new ArrayList<>();
+
         for (int i = 0; i < diceRolls; i++) {
             int dice1, dice2, dice3, dice4, dice5, dice6;
             for (int j = 0; j < diceRolls; j++){
                 // Make the roll array which is the dices that we have rolled.
-                // roll[i] = rollDice();
+                roll.add(diceRoll());
             }
-            if (i == 0) {
-                System.out.print("You rolled: ");
+            for (int j = 0; j < roll.size(); i++) {
+                numbers.add(roll.get(j));
+               roll.remove(j);
             }
 
-            numbers = new ArrayList<>();
-            int roll = diceRoll();
-            numbers.add(roll);
+            if (i > 0) {
+                if (tst == false){
+                    System.out.print("You rolled: ");
+                    tst = true;
+                }
+                String msg = numbers.toString();
+                System.out.println(msg);
+            }
+        }
+        if (saving == false){
+            ArrayList<Integer> savedDices = new ArrayList<>();
+
+
+            boolean saved = true;
+            while (saved == true) {
+                System.out.println("Vilken tärning vill du spara? ");
+                int save = in.nextInt(); // Tärningen som sparas
+
+                if (numbers.contains(save)) { // Kolla ifall tärningen finns i det som vi slagit
+                    for (int j = 0; j < numbers.size(); j++) {
+                        if (numbers.get(j) == save) {
+                            numbers.remove(j); // Ta bort tärningen som du vill spara
+                            savedDices.add(save); // Lägg till tärningen i savedDices listan
+
+                            System.out.print("Remaining dices: ");
+                            System.out.println(numbers);
+                            System.out.println("Saved: " + save);
+                            break;
+                        }
+                    }
+                    }
+                System.out.println("Vill du spara en till tärning? Y/N");
+                if ((in.next().equals("y")) || (in.next().equals("Y"))){
+                    saved = true;
+                }
+                else {
+                    saved = false;
+                }
+            }
+            System.out.print("Saved dices: " + savedDices);
         }
         ArrayList<Integer> chosenNumbers = new ArrayList<>();
-
 
 
     }

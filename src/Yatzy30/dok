@@ -6,3 +6,9 @@ Tisdag 26 Mars:
 Som ska göras:
 1. Börja med spel metoden
 2. Kolla i pseudo koden.
+
+Måndag 8 April:
+1. Gjort ett system för att kunna rulla på 6 tärningar en gång och spara en av dem och ta bort den från ArrayListen.
+
+Ska göras:
+1. Fortsätta med att välja tärningar från ArrayListan tills att användaren säger 'exit'.
