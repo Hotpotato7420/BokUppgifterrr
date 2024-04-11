@@ -23,7 +23,7 @@ public class Yatzy30 {
 
 
     public static void main(String[] args) {
-
+//
         int playerAmount = getPlayerAmount();
         ArrayList<String> playerList = getPlayerList(playerAmount);
         int[] playerPoints = startingPlayerPoints(playerAmount, playerList);
