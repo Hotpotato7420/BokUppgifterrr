@@ -12,30 +12,38 @@ public class Yatzy30 {
     // Create scanner that can be used in any method
     private static final Scanner in = new Scanner (System.in);
 
+    private static int next = -1;
+
+    private static Boolean asking = true;
+
+    private static ArrayList<String> playerList = null;
+
+    private static int[] playerPoints = null;
+
 
 
     public static void main(String[] args) {
-        // Ask user for number of players
+
         int playerAmount = getPlayerAmount();
-
-        // Ask user for the names of the players and put them into an ArrayList
-        ArrayList<java.lang.String> playerList = getPlayerList(playerAmount);
-
-        // Give players 30 points from the start in an array
+        ArrayList<String> playerList = getPlayerList(playerAmount);
         int[] playerPoints = startingPlayerPoints(playerAmount, playerList);
 
+        mainGame(playerAmount, playerList, playerPoints);
+    }
 
+    public static void mainGame(int playerAmount, ArrayList<String> playerList, int[] playerPoints) {
+
+        next++;
+        System.out.println("Spelare " + playerList.get(0 + next) + "'s tur");
+        System.out.println();
         boolean ask = false;
-        while (ask == false){
+        while (ask == false) {
             System.out.println("Vill du spela? Y/N");
-            if ((in.next().equals("y")) || (in.next().equals("Y"))){
+            if ((in.next().equals("y")) || (in.next().equals("Y"))) {
                 break;
             }
         }
-        mainGame();
-    }
-
-    public static void mainGame() {
+// -------------------------------------------------------------------------------------------------------------------\\
         int diceRolls = 6; // Number of dices left
         ArrayList<Integer> roll;
         roll = new ArrayList<>();
@@ -46,17 +54,17 @@ public class Yatzy30 {
 
         for (int i = 0; i < diceRolls; i++) {
             int dice1, dice2, dice3, dice4, dice5, dice6;
-            for (int j = 0; j < diceRolls; j++){
+            for (int j = 0; j < diceRolls; j++) {
                 // Make the roll array which is the dices that we have rolled.
                 roll.add(diceRoll());
             }
             for (int j = 0; j < roll.size(); i++) {
                 numbers.add(roll.get(j));
-               roll.remove(j);
+                roll.remove(j);
             }
 
             if (i > 0) {
-                if (tst == false){
+                if (tst == false) {
                     System.out.print("You rolled: ");
                     tst = true;
                 }
@@ -64,8 +72,8 @@ public class Yatzy30 {
                 System.out.println(msg);
             }
         }
-        if (saving == false){
-            ArrayList<Integer> savedDices = new ArrayList<>();
+        ArrayList<Integer> savedDices = new ArrayList<>();
+        if (saving == false) {
 
 
             boolean saved = true;
@@ -85,19 +93,34 @@ public class Yatzy30 {
                             break;
                         }
                     }
-                    }
-                System.out.println("Vill du spara en till tärning? Y/N");
-                if ((in.next().equals("y")) || (in.next().equals("Y"))){
-                    saved = true;
                 }
-                else {
+                System.out.println("Vill du spara en till tärning? Y/N");
+                if ((in.next().equals("y")) || (in.next().equals("Y"))) {
+                    System.out.println("Remaining dices: " + numbers);
+                    saved = true;
+                } else {
                     saved = false;
                 }
             }
             System.out.print("Saved dices: " + savedDices);
         }
-        ArrayList<Integer> chosenNumbers = new ArrayList<>();
 
+
+        int totalNumber = 0;
+        for (int j = 0; j < savedDices.size(); j++) { // Loop for adding the total amount of number from the dices.
+            totalNumber += savedDices.get(j);
+        }
+        if (totalNumber >= 30) {
+
+        }
+        else {
+            int selfDamage = 30 - totalNumber;
+            playerPoints[next] -= selfDamage;
+        }
+        System.out.println(+playerPoints[next]);
+        if (playerPoints[next] > 0){
+            mainGame();
+        }
 
     }
 
