@@ -1,7 +1,6 @@
 package Yatzy30;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -14,30 +13,29 @@ public class Yatzy30 {
 
     private static int next = -1;
 
-    private static Boolean asking = true;
-
-    private static ArrayList<String> playerList = null;
-
-    private static int[] playerPoints = null;
-
+    private static ArrayList<Integer> playerPoints = null;
 
 
     public static void main(String[] args) {
-//
+
         int playerAmount = getPlayerAmount();
         ArrayList<String> playerList = getPlayerList(playerAmount);
-        int[] playerPoints = startingPlayerPoints(playerAmount, playerList);
+        playerPoints = startingPlayerPoints(playerAmount, playerList);
 
         mainGame(playerAmount, playerList, playerPoints);
     }
 
-    public static void mainGame(int playerAmount, ArrayList<String> playerList, int[] playerPoints) {
+    public static void mainGame(int playerAmount, ArrayList<String> playerList, ArrayList<Integer> playerPoints) {
 
-        next++;
-        System.out.println("Spelare " + playerList.get(0 + next) + "'s tur");
+        if (next+1 > playerAmount){
+            next = -1;
+        }
+        else next++;
+
+        System.out.println("Spelare " + playerList.get(next) + "'s tur");
         System.out.println();
         boolean ask = false;
-        while (ask == false) {
+        while (!ask) {
             System.out.println("Vill du spela? Y/N");
             if ((in.next().equals("y")) || (in.next().equals("Y"))) {
                 break;
@@ -53,7 +51,6 @@ public class Yatzy30 {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         for (int i = 0; i < diceRolls; i++) {
-            int dice1, dice2, dice3, dice4, dice5, dice6;
             for (int j = 0; j < diceRolls; j++) {
                 // Make the roll array which is the dices that we have rolled.
                 roll.add(diceRoll());
@@ -114,14 +111,106 @@ public class Yatzy30 {
 
         }
         else {
-            int selfDamage = 30 - totalNumber;
-            playerPoints[next] -= selfDamage;
-        }
-        System.out.println(+playerPoints[next]);
-        if (playerPoints[next] > 0){
-            mainGame();
-        }
+            int selfDamage = 30-totalNumber;
 
+            playerPoints.set(next, (playerPoints.get(next) - selfDamage));
+        }
+        System.out.println("Remaining HP: " + (playerPoints.get(next)));
+
+
+    //----------------------------------------------------------------------------------------------------------------\\
+        boolean gameContinue = true;
+
+        while(gameContinue){
+            if (next+1 > playerAmount){
+                next = 0;
+            }
+            else next++;
+            System.out.println("Spelare " + playerList.get(next) + "'s tur");
+            System.out.println();
+            while (ask == false) {
+                System.out.println("Vill du spela? Y/N");
+                if ((in.next().equals("y")) || (in.next().equals("Y"))) {
+                    break;
+                }
+            }
+// -------------------------------------------------------------------------------------------------------------------\\
+            diceRolls = 6; // Number of dices left
+
+            roll = new ArrayList<>();
+            tst = false; // Only sends a message once per roll.
+            saving = false;
+
+            numbers = new ArrayList<>();
+
+            for (int i = 0; i < diceRolls; i++) {
+                for (int j = 0; j < diceRolls; j++) {
+                    // Make the roll array which is the dices that we have rolled.
+                    roll.add(diceRoll());
+                }
+                for (int j = 0; j < roll.size(); i++) {
+                    numbers.add(roll.get(j));
+                    roll.remove(j);
+                }
+
+                if (i > 0) {
+                    if (tst == false) {
+                        System.out.print("You rolled: ");
+                        tst = true;
+                    }
+                    String msg = numbers.toString();
+                    System.out.println(msg);
+                }
+            }
+            savedDices = new ArrayList<>();
+            if (saving == false) {
+
+                boolean saved = true;
+                while (saved == true) {
+                    System.out.println("Vilken tärning vill du spara? ");
+                    int save = in.nextInt(); // Tärningen som sparas
+
+                    if (numbers.contains(save)) { // Kolla ifall tärningen finns i det som vi slagit
+                        for (int j = 0; j < numbers.size(); j++) {
+                            if (numbers.get(j) == save) {
+                                numbers.remove(j); // Ta bort tärningen som du vill spara
+                                savedDices.add(save); // Lägg till tärningen i savedDices listan
+
+                                System.out.print("Remaining dices: ");
+                                System.out.println(numbers);
+                                System.out.println("Saved: " + save);
+                                break;
+                            }
+                        }
+                    }
+                    System.out.println("Vill du spara en till tärning? Y/N");
+                    if ((in.next().equals("y")) || (in.next().equals("Y"))) {
+                        System.out.println("Remaining dices: " + numbers);
+                        saved = true;
+                    } else {
+                        saved = false;
+                    }
+                }
+                System.out.print("Saved dices: " + savedDices);
+            }
+
+
+            totalNumber = 0;
+            for (int j = 0; j < savedDices.size(); j++) { // Loop for adding the total amount of number from the dices.
+                totalNumber += savedDices.get(j);
+            }
+            if (totalNumber >= 30) {
+
+            }
+            else {
+                int selfDamage = 30-totalNumber;
+
+                playerPoints.set(next, (playerPoints.get(next) - selfDamage));
+            }
+            System.out.println("Remaining HP: " + (playerPoints.get(next)));
+
+
+        }
     }
 
     // Method for dice rolls, call when rolling a die
@@ -187,13 +276,18 @@ public class Yatzy30 {
 
 
     // Method for setting the players starting points
-    public static int[] startingPlayerPoints(int playerAmount, ArrayList<String> playerList){
+    public static ArrayList<Integer> startingPlayerPoints(int playerAmount, ArrayList<String> playerList){
 
-        int[] playerPoints = new int[playerAmount]; // Array for storing points
-        Arrays.fill(playerPoints, 30); // Give every element 30 points
+        // Array for storing points
+        ArrayList<Integer> playerPoints = new ArrayList<>();
+
+        for (int i = 0; i < playerAmount; i++) { // Give every element 30 points
+            playerPoints.add(30);
+        }
+
         for (int i = 0; i < playerAmount; i++) {
 
-            System.out.println("Spelare " + playerList.get(i) + " har "  + playerPoints[i] + " poäng.");
+            System.out.println("Spelare " + playerList.get(i) + " har "  + playerPoints.get(i) + " poäng.");
         }
         return playerPoints;
     }
