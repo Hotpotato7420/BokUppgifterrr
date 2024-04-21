@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953d86cf-742e-4045-8ae3-873b456fba17" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/Yatzy30/dok" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Kapitel8/Yatzy30.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Yatzy30/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Yatzy30/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kapitel11/tst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kapitel11/tst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Yatzy30.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Yatzy30/Yatzy30.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Yatzy30/Yatzy30.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Yatzy30/dok" beforeDir="false" afterPath="$PROJECT_DIR$/src/Yatzy30/dok" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,29 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/axel.jakobsson/Documents/Bokuppgifter/BokUppgifterrr/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/axel.jakobsson/Documents/Bokuppgifter/BokUppgifterrr/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\axel.jakobsson\Documents\Bokuppgifter\BokUppgifterrr\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\axeja\Documents\Java\BokUppgifterrr\src\Yatzy30\s" />
       <recent name="C:\Users\axel.jakobsson\Documents\Bokuppgifter\BokUppgifterrr\src\Yatzy30" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Yatzy30">
+  <component name="RunManager">
     <configuration name="Uppgift11_1Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Kapitel11.Uppgift11_1Test" />
       <module name="BokUppgifterrr" />
@@ -85,7 +89,7 @@
       </method>
     </configuration>
     <configuration name="Yatzy30" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Yatzy30.Yatzy30" />
+      <option name="MAIN_CLASS_NAME" value="Kapitel8.Yatzy30" />
       <module name="BokUppgifterrr" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,8 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Yatzy30" />
         <item itemvalue="Application.Uppgift11_1Test" />
+        <item itemvalue="Application.Yatzy30" />
       </list>
     </recent_temporary>
   </component>
