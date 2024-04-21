@@ -2,6 +2,9 @@ package Yatzy30;
 
 import java.util.Random;
 
+
+// Den här filen är för att bygga upp tärningen! Kör Player filen
+
 public class Dice {
     private int value; // Initializes the value
     private Random random; // Initialized the random function that I use for the dicerolls.

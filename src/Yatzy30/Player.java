@@ -3,6 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+// MAIN FILEN, KÖR DEN HÄR!!!!!!
+
+
+
 public class Player {
 
     private final List<Integer> savedDiceValues;
